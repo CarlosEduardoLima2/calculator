@@ -1,10 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import Button from './src/components/Button';
+import { useState } from 'react';
+import Display from './src/components/Display';
 
 export default function App() {
+  const [displayValue, setDisplayValue] = useState(0)
   return (
     <View style={styles.container}>
+      <Display value={displayValue}/>
       <View style={styles.buttons}>
         <Button label="AC"/>
         <Button label="/"/>
